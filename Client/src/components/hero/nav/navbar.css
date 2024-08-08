@@ -98,12 +98,14 @@ a {
 }
 .nav__toggle {
   position: relative;
+  /* border: 2px dotted red; */
   width: 32px;
   height: 32px;
+  margin-right: 40px;
 }
 .nav__toggle-menu, .nav__toggle-close {
   font-size: 1.25rem;
-  color: var(--title-color);
+  color: black;
   position: absolute;
   display: grid;
   place-items: center;

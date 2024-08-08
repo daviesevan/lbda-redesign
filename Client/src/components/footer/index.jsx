@@ -16,7 +16,7 @@ const Footer = () => {
               title="Go to LBDA Home Page"
               className="col-span-2 mb-12 md:col-span-1"
             >
-              <img src={logo} className="w-16 h-16" alt="LBDA Logo" />
+              <img src={logo} className="w-12 h-12 sm:w-16 sm:h-16" />
             </Link>
             <nav className="mb-8">
               <p className="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">

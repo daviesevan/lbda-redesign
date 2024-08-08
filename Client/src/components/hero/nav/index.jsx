@@ -72,7 +72,7 @@ const Index = () => {
       <nav className="nav container">
         <div className="nav__data">
           <a href="#" className="nav__logo">
-            <img src={logo} className="w-16 h-16" />
+            <img src={logo} className="w-12 h-12 sm:w-16 sm:h-16" />
           </a>
 
           <div className="nav__toggle" id="nav-toggle">

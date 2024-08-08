@@ -5,7 +5,7 @@ const FaqItem = ({ question, answer, id, isOpen, toggleFaq }) => {
     <div>
       <button
         onClick={() => toggleFaq(id)}
-        className="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+        className="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-green-700 outline-none hover:text-primary focus:text-primary focus:outline-none"
         aria-controls={`faq${id}`}
         aria-expanded={isOpen}
       >
@@ -66,7 +66,7 @@ const index = () => {
 
   return (
     <section className="px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2">
-      <h1 className="mb-6 text-xl text-black font-bold md:text-3xl">
+      <h1 className="mb-6 text-xl text-green-700 font-bold md:text-3xl">
         Frequently Asked Questions
       </h1>
       <div className="text-sm border-t border-b border-gray-200 divide-y divide-gray-200">

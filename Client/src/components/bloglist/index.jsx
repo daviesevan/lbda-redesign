@@ -34,8 +34,8 @@ const blogs = [
 
 const index = () => {
   return (
-    <section className="px-4 py-24 mx-auto max-w-7xl">
-      <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">LBDA Blog</h2>
+    <section className="px-4 py-24 mx-auto max-w-full bg-blue-50">
+      <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">Our Blogs</h2>
       <p className="mb-20 text-lg text-gray-500">
         Insights and updates from the Lake Basin Development Authority.
       </p>

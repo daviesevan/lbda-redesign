@@ -7,7 +7,7 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(220, 68%, 54%);
+  --first-color: green;
   --first-color-lighten: hsl(220, 68%, 97%);
   --title-color: black;
   --text-color: hsl(220, 12%, 45%);
@@ -199,7 +199,7 @@ a {
 }
 .dropdown__icon i {
   font-size: 1.25rem;
-  color: var(--first-color);
+  color: green;
 }
 .dropdown__title {
   font-size: var(--small-font-size);
@@ -216,7 +216,7 @@ a {
   transition: color 0.3s;
 }
 .dropdown__link:hover {
-  color: var(--title-color);
+  color: green;
 }
 
 /* Rotate dropdown icon */

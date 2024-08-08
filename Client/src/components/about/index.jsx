@@ -2,7 +2,7 @@ import React from 'react';
 
 const index = () => {
   return (
-    <section className="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-7xl lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3">
+    <section className="grid grid-cols-1 gap-20 px-4 py-24 mx-auto max-w-full lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3 bg-blue-50">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

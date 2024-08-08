@@ -2,62 +2,77 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import 'remixicon/fonts/remixicon.css';
-import logo from '../../../images/hero/logo_lbda.png'
+import logo from '../../../images/hero/logo_lbda.png';
 
 const Index = () => {
   useEffect(() => {
+    /*=============== SHOW MENU ===============*/
     const showMenu = (toggleId, navId) => {
-      const toggle = document.getElementById(toggleId);
-      const nav = document.getElementById(navId);
+      const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
 
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          nav.classList.toggle('show-menu');
-          toggle.classList.toggle('show-icon');
-        });
-      }
+      toggle.addEventListener('click', () => {
+        // Add show-menu class to nav menu
+        nav.classList.toggle('show-menu');
+        // Add show-icon to show and hide menu icon
+        toggle.classList.toggle('show-icon');
+      });
     };
 
     showMenu('nav-toggle', 'nav-menu');
 
+    /*=============== SHOW DROPDOWN MENU ===============*/
     const dropdownItems = document.querySelectorAll('.dropdown__item');
 
+    // 1. Select each dropdown item
     dropdownItems.forEach((item) => {
       const dropdownButton = item.querySelector('.dropdown__button');
 
+      // 2. Select each button click
       dropdownButton.addEventListener('click', () => {
+        // 7. Select the current show-dropdown class
         const showDropdown = document.querySelector('.show-dropdown');
+
+        // 5. Call the toggleItem function
         toggleItem(item);
 
+        // 8. Remove the show-dropdown class from other items
         if (showDropdown && showDropdown !== item) {
           toggleItem(showDropdown);
         }
       });
     });
 
+    // 3. Create a function to display the dropdown
     const toggleItem = (item) => {
+      // 3.1. Select each dropdown content
       const dropdownContainer = item.querySelector('.dropdown__container');
 
+      // 6. If the same item contains the show-dropdown class, remove
       if (item.classList.contains('show-dropdown')) {
         dropdownContainer.removeAttribute('style');
         item.classList.remove('show-dropdown');
       } else {
+        // 4. Add the maximum height to the dropdown content and add the show-dropdown class
         dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px';
         item.classList.add('show-dropdown');
       }
     };
 
-    const mediaQuery = matchMedia('(min-width: 1118px)');
-    const dropdownContainers = document.querySelectorAll(
-      '.dropdown__container'
-    );
+    /*=============== DELETE DROPDOWN STYLES ===============*/
+    const mediaQuery = matchMedia('(min-width: 1118px)'),
+      dropdownContainer = document.querySelectorAll('.dropdown__container');
 
+    // Function to remove dropdown styles in mobile mode when browser resizes
     const removeStyle = () => {
+      // Validate if the media query reaches 1118px
       if (mediaQuery.matches) {
-        dropdownContainers.forEach((e) => {
+        // Remove the dropdown container height style
+        dropdownContainer.forEach((e) => {
           e.removeAttribute('style');
         });
 
+        // Remove the show-dropdown class from dropdown item
         dropdownItems.forEach((e) => {
           e.classList.remove('show-dropdown');
         });
@@ -91,7 +106,8 @@ const Index = () => {
 
             <li className="dropdown__item">
               <div className="nav__link dropdown__button">
-                About Us <i className="ri-arrow-down-s-line dropdown__arrow"></i>
+                About Us{' '}
+                <i className="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
               <div className="dropdown__container">
                 <div className="dropdown__content">
@@ -107,7 +123,10 @@ const Index = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/about/jurisdiction" className="dropdown__link">
+                        <Link
+                          to="/about/jurisdiction"
+                          className="dropdown__link"
+                        >
                           Area of Jurisdiction
                         </Link>
                       </li>
@@ -144,7 +163,8 @@ const Index = () => {
 
             <li className="dropdown__item">
               <div className="nav__link dropdown__button">
-                Products & Services <i className="ri-arrow-down-s-line dropdown__arrow"></i>
+                Products & Services{' '}
+                <i className="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
               <div className="dropdown__container">
                 <div className="dropdown__content">
@@ -187,7 +207,8 @@ const Index = () => {
 
             <li className="dropdown__item">
               <div className="nav__link dropdown__button">
-                Projects <i className="ri-arrow-down-s-line dropdown__arrow"></i>
+                Projects{' '}
+                <i className="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
               <div className="dropdown__container">
                 <div className="dropdown__content">
@@ -208,17 +229,26 @@ const Index = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/projects/completed" className="dropdown__link">
+                        <Link
+                          to="/projects/completed"
+                          className="dropdown__link"
+                        >
                           Completed Projects
                         </Link>
                       </li>
                       <li>
-                        <Link to="/projects/proposed" className="dropdown__link">
+                        <Link
+                          to="/projects/proposed"
+                          className="dropdown__link"
+                        >
                           Proposed Projects
                         </Link>
                       </li>
                       <li>
-                        <Link to="/projects/concepts" className="dropdown__link">
+                        <Link
+                          to="/projects/concepts"
+                          className="dropdown__link"
+                        >
                           Project Concept Proposals
                         </Link>
                       </li>
@@ -246,7 +276,10 @@ const Index = () => {
                     <span className="dropdown__title">Company</span>
                     <ul className="dropdown__list">
                       <li>
-                        <Link to="/company/staff-portal" className="dropdown__link">
+                        <Link
+                          to="/company/staff-portal"
+                          className="dropdown__link"
+                        >
                           Staff Portal
                         </Link>
                       </li>
@@ -294,7 +327,10 @@ const Index = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/tenders/documents" className="dropdown__link">
+                        <Link
+                          to="/tenders/documents"
+                          className="dropdown__link"
+                        >
                           Tender Documents
                         </Link>
                       </li>

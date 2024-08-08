@@ -9,7 +9,7 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(220, 68%, 54%);
   --first-color-lighten: hsl(220, 68%, 97%);
-  --title-color: hsl(220, 48%, 28%);
+  --title-color: black;
   --text-color: hsl(220, 12%, 45%);
   --body-color: white;
   /*========== Font and typography ==========*/

@@ -284,6 +284,14 @@ const Index = () => {
                         </Link>
                       </li>
                       <li>
+                        <Link
+                          to="/company/press"
+                          className="dropdown__link"
+                        >
+                          Public Press
+                        </Link>
+                      </li>
+                      <li>
                         <Link to="/company/careers" className="dropdown__link">
                           Careers
                         </Link>

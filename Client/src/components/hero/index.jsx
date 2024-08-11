@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
+import Button from '../../commons/button'
 
 // Image imports
 import landing from '../../images/hero/landing.jpeg'
@@ -62,9 +63,10 @@ const Index = () => {
           <p className="mt-4 text-sm text-white">
             {Hero.tagline}
           </p>
-          <button className="px-6 py-3 mt-6 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-emerald-600  hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500">
+          {/* <button className="px-6 py-3 mt-6 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-emerald-600  hover:bg-emerald-500 focus:outline-none focus:bg-emerald-500">
             Learn More
-          </button>
+          </button> */}
+          <Button><p>Learn More</p></Button>
         </div>
       </div>
     </div>

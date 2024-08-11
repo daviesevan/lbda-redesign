@@ -4,7 +4,7 @@ import blogimage2 from "../../images/blogs/marquee-2.jpeg";
 import blogimage3 from "../../images/blogs/marquee-3.jpeg";
 import blogimage4 from "../../images/blogs/marquee-4.jpeg";
 import blogimage6 from "../../images/blogs/marquee-6.jpeg";
-
+import Button from '../../commons/button'
 const blogs = [
   {
     image: blogimage1,

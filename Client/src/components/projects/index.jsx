@@ -2,7 +2,7 @@ import React from 'react';
 import projectimage2 from "../../images/projects/marquee-2.jpeg";
 import projectimage1 from "../../images/projects/marquee-1.jpeg";
 import projectimage3 from "../../images/projects/marquee-3.jpeg";
-
+import Button from '../../commons/button'
 const projects = [
   {
     id: 1,
@@ -50,12 +50,13 @@ const index = () => {
               {project.description}
             </p>
             <p className="mb-4 text-sm font-normal text-gray-600">Location: {project.location}</p>
-            <a href="#" className="btn btn-light btn-sm">Continue Reading</a>
+            {/* <a href="#" className="btn btn-light btn-sm">Continue Reading</a> */}
+            <Button><p>Continue reading</p></Button>
           </div>
         ))}
       </div>
       <div className="flex flex-col items-center justify-center pt-12 mt-12 space-x-0 space-y-2 border-t border-gray-200 md:space-x-2 md:space-y-0 md:flex-row">
-        <a href="#" className="w-full rounded-full btn btn-light btn-xl md:w-auto">View all</a>
+      <Button><p>View all</p></Button>
       </div>
     </section>
   );
